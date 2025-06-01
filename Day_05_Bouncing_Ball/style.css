@@ -1,0 +1,32 @@
+
+body {
+  background: #222;
+  display: flex; 
+  align-items: center;     
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+h1{
+  color: white;
+  font-family:  Arial, sans-serif;
+  
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: #ff5252;
+  border-radius: 50%;
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(500px);
+  }
+}
