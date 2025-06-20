@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" 
+  content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Animated Tab Switch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+<div class="tab-container">
+  <div class="tabs">
+    <button class="tab active" 
+    onclick="switchTab(event, 0)">Overview</button>
+    <button class="tab"
+    onclick="switchTab(event, 1)">Features</button>
+    <button class="tab" 
+    onclick="switchTab(event, 2)">Pricing</button>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane active">
+      <h2>Overview</h2>
+      <p>This is a sleek and modern 
+        tab switch UI example.
+         It’s responsive and stylish.</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Features</h2>
+      <ul>
+        <li>Clean Design</li>
+        <li>Smooth Animation</li>
+        <li>Responsive Layout</li>
+      </ul>
+    </div>    
+    <div class="tab-pane">
+      <h2>Pricing</h2>
+      <p>Starts from <strong>$9.99/month</strong>. 
+        Contact us for enterprise solutions.</p>
+    </div>
+  </div>
+</div>
+<script>
+function switchTab(event, index) {
+  const tabs = document.querySelectorAll
+  ('.tab');
+  const panes = document.querySelectorAll
+  ('.tab-pane');
+
+  tabs.forEach(tab =>
+   tab.classList.remove('active'));
+  panes.forEach(pane =>
+   pane.classList.remove('active'));
+
+  event.target.classList.add('active');
+  panes[index].classList.add('active');
+}
+</script>
+</body>
+</html>
